@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { BooksServices } from "../services/books.services";
-import { booksDatabase } from "../database/database";
 
 interface IBooksControllers {
   addBook(req: Request, res: Response): Response;

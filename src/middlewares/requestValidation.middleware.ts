@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { ZodObject, ZodRawShape, ZodTypeAny } from "zod";
+import { ZodTypeAny } from "zod";
 
 interface IRequestSchemas {
   params?: ZodTypeAny;
@@ -25,7 +25,7 @@ export class RequestValidation {
 
         next();
       } catch (error) {
-        next(error); 
+        next(error);
       }
     };
   }
